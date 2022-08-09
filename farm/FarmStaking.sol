@@ -16,7 +16,6 @@ import "./interfaces/IFarmStaking.sol";
 import "./interfaces/IFarmReward.sol";
 
 import "../libs/Initializable.sol";
-import "../libs/Recoverable.sol";
 
 import "./Model.sol";
 
@@ -26,7 +25,7 @@ library Lib {
     }
 }
 
-contract FarmStaking is IFarmStaking, ERC721Holder, ERC1155Holder, ReentrancyGuard, Initializable, Pausable, Recoverable {
+contract FarmStaking is IFarmStaking, ERC721Holder, ERC1155Holder, ReentrancyGuard, Initializable, Pausable {
     using EnumerableMap for EnumerableMap.UintToUintMap;
     using EnumerableSet for EnumerableSet.UintSet;
 
